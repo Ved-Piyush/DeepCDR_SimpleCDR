@@ -1,0 +1,20 @@
+2023-07-18 18:53:46.493087: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+/lustre/work/statgrads/vpiyush2/DeepCDR/SimplerDeepCDR/simple_gcn_proper_Dual_CDR_Both.py:31: FutureWarning: In a future version of pandas all arguments of DataFrame.drop except for the argument 'labels' will be keyword-only.
+  x_train, x_valid, y_train, y_valid = train_test_split(drugs_smiles_cell_lines_ic50_df.drop(["IC50"],1), drugs_smiles_cell_lines_ic50_df["IC50"].values,
+2023-07-18 18:54:01.806139: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-07-18 18:54:02.649681: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 78910 MB memory:  -> device: 0, name: NVIDIA A100 80GB PCIe, pci bus id: 0000:31:00.0, compute capability: 8.0
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+2023-07-18 18:55:37.283929: I tensorflow/stream_executor/cuda/cuda_blas.cc:1786] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+2023-07-18 18:55:37.472228: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8401
+Could not load symbol cublasGetSmCountTarget from libcublas.so.11. Error: /home/statgrads/vpiyush2/.conda/envs/tensorflow-gpu-2.9-custom/lib/python3.9/site-packages/tensorflow/python/../../../../libcublas.so.11: undefined symbol: cublasGetSmCountTarget
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, lstm_cell_layer_call_fn, lstm_cell_layer_call_and_return_conditional_losses while saving (showing 4 of 4). These functions will not be directly callable after loading.

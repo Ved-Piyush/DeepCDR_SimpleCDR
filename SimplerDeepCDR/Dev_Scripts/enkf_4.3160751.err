@@ -1,0 +1,44 @@
+2023-07-18 13:18:00.441718: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+/lustre/work/statgrads/vpiyush2/DeepCDR/SimplerDeepCDR/simplecdr_gcn.py:34: FutureWarning: In a future version of pandas all arguments of DataFrame.drop except for the argument 'labels' will be keyword-only.
+  x_train, x_valid, y_train, y_valid = train_test_split(drugs_smiles_cell_lines_ic50_df.drop(["IC50"],1), drugs_smiles_cell_lines_ic50_df["IC50"].values,
+2023-07-18 13:18:15.859023: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-07-18 13:18:16.715196: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1532] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 78910 MB memory:  -> device: 0, name: NVIDIA A100 80GB PCIe, pci bus id: 0000:31:00.0, compute capability: 8.0
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+2023-07-18 13:19:23.615081: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8401
+2023-07-18 13:19:25.260144: I tensorflow/stream_executor/cuda/cuda_blas.cc:1786] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+Could not load symbol cublasGetSmCountTarget from libcublas.so.11. Error: /home/statgrads/vpiyush2/.conda/envs/tensorflow-gpu-2.9-custom/lib/python3.9/site-packages/tensorflow/python/../../../../libcublas.so.11: undefined symbol: cublasGetSmCountTarget
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, lstm_cell_layer_call_fn, lstm_cell_layer_call_and_return_conditional_losses while saving (showing 4 of 4). These functions will not be directly callable after loading.
+Traceback (most recent call last):
+  File "/lustre/work/statgrads/vpiyush2/DeepCDR/SimplerDeepCDR/simplecdr_gcn.py", line 248, in <module>
+    val_preds = simplecdr.predict([smile_strings_valid, drug_features_valid, valid_gcn_feats, 
+  File "/home/statgrads/vpiyush2/.conda/envs/tensorflow-gpu-2.9-custom/lib/python3.9/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/tmp/__autograph_generated_fileplbbbdk0.py", line 15, in tf__predict_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "/home/statgrads/vpiyush2/.conda/envs/tensorflow-gpu-2.9-custom/lib/python3.9/site-packages/keras/engine/training.py", line 1845, in predict_function  *
+        return step_function(self, iterator)
+    File "/home/statgrads/vpiyush2/.conda/envs/tensorflow-gpu-2.9-custom/lib/python3.9/site-packages/keras/engine/training.py", line 1834, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "/home/statgrads/vpiyush2/.conda/envs/tensorflow-gpu-2.9-custom/lib/python3.9/site-packages/keras/engine/training.py", line 1823, in run_step  **
+        outputs = model.predict_step(data)
+    File "/home/statgrads/vpiyush2/.conda/envs/tensorflow-gpu-2.9-custom/lib/python3.9/site-packages/keras/engine/training.py", line 1791, in predict_step
+        return self(x, training=False)
+    File "/home/statgrads/vpiyush2/.conda/envs/tensorflow-gpu-2.9-custom/lib/python3.9/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "/home/statgrads/vpiyush2/.conda/envs/tensorflow-gpu-2.9-custom/lib/python3.9/site-packages/keras/engine/input_spec.py", line 200, in assert_input_compatibility
+        raise ValueError(f'Layer "{layer_name}" expects {len(input_spec)} input(s),'
+
+    ValueError: Layer "model" expects 8 input(s), but it received 7 input tensors. Inputs received: [<tf.Tensor 'IteratorGetNext:0' shape=(None, 1) dtype=string>, <tf.Tensor 'IteratorGetNext:1' shape=(None, 106) dtype=float32>, <tf.Tensor 'IteratorGetNext:2' shape=(None, 100, 75) dtype=float32>, <tf.Tensor 'IteratorGetNext:3' shape=(None, 710) dtype=float32>, <tf.Tensor 'IteratorGetNext:4' shape=(None, 697) dtype=float32>, <tf.Tensor 'IteratorGetNext:5' shape=(None, 808) dtype=float32>, <tf.Tensor 'IteratorGetNext:6' shape=(None, 34673) dtype=float32>]
+
