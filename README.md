@@ -15,7 +15,7 @@ Scripts to fit the three types of multi-arm CDR models are described below:
 
 Dropout can be activated during the prediction stage to give a range of predictions for each test sample. We tested out various dropout activation scenarios with the **FullGCN:** model: 
 
-1. Dropout is active both during training and during prediction. In this case, we can obtain a band of predictions for each test sample and compute empirical 95$\%$ prediction intervals. [Active Dropout both Training and Prediction](https://github.com/Ved-Piyush/DeepCDR_SimpleCDR/blob/main/SimplerDeepCDR/SimplerCDRGCN_Exact_Network_more_dropout_active_both.ipynb)
+1. Dropout is active both during training and during prediction. In this case, we can obtain a band of predictions for each test sample and compute empirical 95% prediction intervals. [Active Dropout both Training and Prediction](https://github.com/Ved-Piyush/DeepCDR_SimpleCDR/blob/main/SimplerDeepCDR/SimplerCDRGCN_Exact_Network_more_dropout_active_both.ipynb)
 
 2. Dropout is active during training but not during prediction. Since dropout is not activated during prediction for each test sample only one prediction can be obtained, and therefore, no empirical prediction intervals can be calculated. [Active Dropout during Training but not during Prediction](https://github.com/Ved-Piyush/DeepCDR_SimpleCDR/blob/main/SimplerDeepCDR/SimplerCDRGCN_Exact_Network_more_dropout_active_only_train_not_pred.ipynb)
 
